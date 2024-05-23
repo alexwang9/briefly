@@ -12,7 +12,7 @@ const EmailForm = ({ onSubmit }) => {
   return(
     <form onSubmit={handleSubmit} className="email-form">
       <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter your email" required />
-      <button type="submit">Subscribe</button>
+      <button type="submit" className="subscribe-button">Subscribe</button>
     </form>
   );
 };
