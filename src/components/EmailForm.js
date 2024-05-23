@@ -10,8 +10,8 @@ const EmailForm = ({ onSubmit }) => {
   };
 
   return(
-    <form onSubmit={handleSubmit}>
-      <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Sign up!" required/>
+    <form onSubmit={handleSubmit} className="email-form">
+      <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter your email" required />
       <button type="submit">Subscribe</button>
     </form>
   );
