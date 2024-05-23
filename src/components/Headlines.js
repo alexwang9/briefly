@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
+import '../App.css';
 
 const Headlines = () => {
   const [headlines, setHeadlines] = useState([]);
@@ -21,18 +22,19 @@ const Headlines = () => {
 
   return (
     <>
-      <h2>recent headlines</h2>
-      <div className="headlines">
-        {headlines.map((headline, index) => (
-          <div key={index} className="headline">
-            <h3>{headline.title}</h3>
-            <p>{headline.abstract}</p>
-            <a href={headline.url} target="_blank" rel="noopener noreferrer">Read more</a>
-          </div>
-        ))}
+      <div className="Headlines-section">
+        <h2 className="headlines-header">recent headlines</h2>
+        <div className="headlines">
+          {headlines.map((headline, index) => (
+            <div key={index} className="headline">
+              <a href={headline.url} target="_blank" rel="noopener noreferrer" className="headline-title"><em>{headline.title}</em></a>
+              <p className="headline-abstract">{headline.abstract}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </>
   );
 };
-
+//<p>{headline.abstract}</p>
 export default Headlines;

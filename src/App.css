@@ -36,3 +36,56 @@
     transform: rotate(360deg);
   }
 }
+
+
+.Briefly-header{
+  font-size: 70px;
+  color: #6700A6;
+  margin-top: 60px;
+  margin-bottom: 5px;
+}
+
+.Body-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 30px;
+}
+
+.About-section{
+  display: flex;
+  flex-direction: column;
+  margin-left: 300px;
+  margin-right: 300px;
+  outline: 2px spotted black;
+}
+
+.about-header{
+  margin-bottom: 0;
+  font-size: 35px;
+}
+
+.Headlines-section{
+  margin-top: 60px;
+  margin-left: 300px;
+  margin-right: 300px;
+}
+
+.headline{
+  padding-bottom: 20px;
+}
+
+.headlines-header{
+  font-size: 35px;
+}
+
+.headline-title{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 18px;
+}
+
+.headline-abstract{
+  padding-left: 100px;
+  padding-right: 100px;
+}

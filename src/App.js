@@ -8,8 +8,8 @@ import './App.css';
 function Header() {
   return(
     <>
-      <h1 className="briefly-header">briefly</h1>
-      <div className="datetime-container">
+      <h1 className="Briefly-header">briefly</h1>
+      <div className="Datetime-container">
         <DateTime />
       </div>
     </>
@@ -19,8 +19,8 @@ function Header() {
 function About( {description} ) {
   return(
     <>
-      <div className="about-section">
-        <h2>about briefly</h2>
+      <div className="About-section">
+        <h2 className="about-header">about briefly</h2>
         <p> {description} </p>
       </div>
     </>
@@ -34,9 +34,11 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
-      <About description = { description } />
-      <Headlines />
+      <Header/>
+      <div className="Body-section">
+        <About description = { description }/>
+        <Headlines />
+      </div>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>

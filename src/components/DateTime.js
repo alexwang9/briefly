@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import '../DateTime.css';
 
 export const DateTime = () => {
   var [date, setDate] = useState(new Date());
@@ -11,8 +12,8 @@ export const DateTime = () => {
   });
 
   return(
-    <div>
-      <p> {date.toLocaleDateString()} {date.toLocaleTimeString()} </p>
+    <div className="datetime-container">
+      <p className="datetime"> {date.toLocaleDateString()} {date.toLocaleTimeString()} </p>
     </div>
   )
 }
