@@ -74,6 +74,7 @@ cron.schedule('0 8 * * *', () => {
 });
 
 // Temporary endpoint to trigger the sendSummaries function manually
+// http://localhost:3001/send-test-email
 app.get('/send-test-email', async (req, res) => {
   try {
     await sendSummaries();
