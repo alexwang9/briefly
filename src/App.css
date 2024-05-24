@@ -21,7 +21,11 @@
   flex-direction: column;
   margin-left: 300px;
   margin-right: 300px;
-  outline: 2px spotted black;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 30px;
+  border: 1px solid gray;
+  border-radius: 30px;
 }
 
 .about-header{
@@ -33,6 +37,8 @@
   margin-top: 60px;
   margin-left: 300px;
   margin-right: 300px;
+  border: 1px solid gray;
+  border-radius: 30px;
 }
 
 .headline{
@@ -55,5 +61,50 @@
 }
 
 .email-form{
-  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  align-items: center;
+  width: 35%;
+  margin: 0 auto;
+  margin-top: 60px;
+  margin-bottom: 80px;
+  padding-bottom: 80px;
+  padding-top: 60px;
+  border-radius: 20px;
+  color: #9A33CC;
+}
+
+.sign-up{
+  font-size: 30px;
+}
+
+.email-input{
+  width: 300px;
+  height: 30px;
+  border-radius: 10px;
+  padding-left: 10px;
+  margin-bottom: 10px;
+  border: 1px solid gray;
+}
+
+.subscribe-button{
+  width: 314px;
+  height: 30px;
+  font-weight: bold;
+  background-color: #ffffff;
+  border: 1px solid gray;
+  border-radius: 8px;
+}
+
+.subscribe-button:hover{
+  background-color: #bc79dd;
+  color: white;
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.subscribe-button:active{
+  background-color: #9A33CC;
 }

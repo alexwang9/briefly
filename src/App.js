@@ -38,7 +38,7 @@ function App() {
   const handleSubscribe = async(email) =>{
     try {
       await axios.post('http://localhost:3001/subscribe', { email });
-      alert('Subscribed sucessfully!');
+      //alert('Subscribed sucessfully!');
     } catch (error) {
       console.error('There was an error subscribing:', error);
     }

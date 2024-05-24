@@ -28,7 +28,11 @@ app.post('/subscribe', async(req, res) => {
 
 const sendSummaries = async() => {
   const response = await axios.get(`https://api.nytimes.com/svc/topstories/v2/home.json?api-key=${process.env.NYT_API_KEY}`);
-  const summaries = response.data.results.map(article=>article.title).join('\n');
+  const summaries = response.data.results.slice(0,8).map(article=>{
+    return `<li style="color: black;"><strong style="font-size: 18px;">${article.title}</strong><br>${article.abstract}</li>`;
+  }).join('') + `</ul>`;
+
+  const emailContent = `<h1 style="text-align: center;">Today's Headlines</h1>` + summaries;
 
   const emails = await Email.find({});
   emails.forEach(({ email }) => {
@@ -40,11 +44,14 @@ const sendSummaries = async() => {
       },
     });
 
+    var date = new Date();
+    console.log('current date: ', date);
+
     const mailOptions = {
       from: process.env.EMAIL,
       to: email,
-      subject: 'briefly NYT summary',
-      text: summaries,
+      subject: `briefly ${date.toLocaleDateString()} NYT summary`,
+      html: emailContent,
     };
 
     transporter.sendMail(mailOptions, (error, info) => {
